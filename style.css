@@ -1,0 +1,114 @@
+a:link {
+	color: #069;
+}
+a:visited {
+	color: #039;
+}
+a:hover {
+	color: #39F;
+}
+body {
+	background-color: #CCC;
+	background-repeat: repeat;
+}
+
+#content {
+	float: left;
+	width: 650px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+}
+#mycart {
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000;
+	width: 260px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+#topmenu {
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #30F;
+}
+
+.siteheader {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	color: #000;
+	font-style: normal;
+	text-align: right;
+}
+.footer {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	background-color: #CCC;
+}
+.sidemenu {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000;
+	border: 2px groove #666;
+}
+body {
+	background-color: #FFF;
+
+}
+input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#searchForProduct {
+	float: right;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+.priceStyle {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #FF9;
+	text-align: right;
+}
+.productCategory {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+
+.productNameStyle {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+#DivCurrentUser {
+	float: right;
+	width: 400px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+.formTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #930;
+	text-decoration: underline;
+	text-align: right;
+}
+
+input {
+
+}

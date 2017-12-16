@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript Web Client Project - Gerry mc donnell</title>
+
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="Users.js"></script>
+<script type="text/javascript" src="products.js"></script>
+<script type="text/javascript" src="cartitems.js"></script>
+<script type="text/javascript" src="createstock.js"></script>
+<script type="text/javascript" src="reviews.js"></script>
+<script type="text/javascript" src="dom.js"></script>
+
+
+<script>
+	//stuff to do add product reviews
+	//dom tables
+	//fix searching
+	var userArray=new Array();
+	var productArray=new Array();
+	var cartArray=new Array();
+	var currentUser=-1;//whos the curent user, set this value when user logs in,-1 means no user logged in
+	
+	var ProductCats =new Array(
+	"Hard_Drive",
+	"CPU",
+	"Laptop",
+	"Graphics_Cards",
+	"DVDs",
+	"Music"); // 
+	
+	var searchResults=new Array();
+	
+	//product reviews
+	var productReviewArray=new Array();
+	//fields that can be searched
+	var sSearchFields=new Array("productname","category");
+
+	
+	
+</script>
+
+
+</head>
+
+
+
+<body>
+<table width="1068" height="634" border="1" align="center">
+  <tr align="right">
+    <td height="153" colspan="3"><p class="siteheader">A store
+
+<div id="searchForProduct">        
+<label for="txtsearchForProduct">Search
+  <select name="category" id="category"> 
+  <script>
+  	var str="";
+	for(i=0;i<sSearchFields.length;i++)	
+	{		
+		str+="<option value="+i+">" + sSearchFields[i]+ "</option>";
+	}
+  	document.write(str);
+  </script>  
+  </select>
+</label>
+<input name="txtsearchForProduct" type="text" value="hard drive" id="quickProductSearch"/>
+<input type="button" name="btnsearchProducts" id="btnsearchProducts" value="Search" onclick="searchForProduct()"/>        
+</div>
+
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      
+      
+      <div id="topmenu"> Content for  id "topmenu" Goes Here      
+        <script>
+		 //prints top level menu of product categories
+		document.getElementById("topmenu").innerHTML = "";
+	  	printpageLink("Index.html","Home");
+		document.write(" | ");
+		
+		for(i=0;i<ProductCats.length;i++)
+		{
+			slink=printJSFunctionLink("searchForProduct('category','" +ProductCats[i]+"')",ProductCats[i]);
+			document.write( slink + " | " );
+		}
+	   </script>      
+      </div>
+      
+      
+
+      <div id="DivCurrentUser">Content for  id "DivCurrentUser" Goes Here</div>
+    </td>
+  </tr>
+  <tr>
+    <td width="138" height="455" valign="top" class="sidemenu"><p><strong>Site Menu:</strong></p>
+      <p><a href="Index.html">Home<br />
+      </a><br />
+        <a href="javascript:printLoginForm()">Login</a><br />
+        <a href="javascript:printRegisterUserForm()">Register</a><br />
+      <a href="javascript:printProductsv2()">Show Products</a></p>
+<script>
+		document.write("Categories:<br>");
+	  	for(i=0;i<ProductCats.length;i++)
+		{
+			slink=printJSFunctionLink("searchForProduct('category','" +ProductCats[i]+"')",ProductCats[i]);
+			document.write( slink +"<br>");
+		}
+	  </script>
+      
+
+<p><strong>Admin:</strong></p>
+    <p><a href="Javascript:printAddProductForm()">Add Product</a><br />
+    <a href="javascript:printProductsDOM()">Show Products</a><br />
+    <a href="javascript:printShowUsersDOM()">Show Users</a></p></td>
+    <td width="914" colspan="2" valign="top">
+    
+	<script>        
+	  
+	    addProducts();		
+		addUsers();		
+		//add some reviews
+		testcreateReviews();		
+		
+		//sort products by name
+		function sortByProductName()
+		{
+			productArray.sort(sortbyProductName);
+			//redisplay
+			printProductsv2();
+		}		
+		
+		function sortByProductPrice()
+		{
+			productArray.sort(sortbyPriceAsc); 
+			//redisplay
+			printProductsv2()
+		}		
+		
+		function continueShopping()
+		{
+			//just show products again
+			printProductsv2();
+		}
+		
+		
+	  </script>      
+      
+      <div id="content">
+      <p class="formTitle">Hot Deals in Stock</p>
+      <table width="200" border="1" align="center">
+        <tr>
+          <td><a href="javascript:showProduct('1');"><img src="imgs/amdcpu.jpg" alt="" width="200" height="150" /></a></td>
+          <td><a href="javascript:showProduct('3');"><img src="imgs/atigfxcard.jpg" alt="" width="200" height="150" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="javascript:showProduct('6');"><img src="imgs/doveskor.jpg" alt="" width="170" height="170" /></a></td>
+          <td><a href="javascript:showProduct('4');"><img src="imgs/intelcpu.jpg" alt="" width="200" height="150" /></a></td>
+        </tr>
+      </table>
+      </div>
+       
+      <div id="mycart">Your Cart:<img src="imgs/cart_icon.jpg" width="80" height="80" align="right" /></div>
+      <p>&nbsp;</p>
+  </tr>
+  <tr align="center">
+    <td colspan="3" class="footer">footer 2010 Dkit Gerry mc Donnell</td>
+  </tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+#imgTrans img {
+	height: 100px;
+	width: 100px;
+}
+
+body{
+	text-align:center;
+	margin: 0px;
+	padding: 0px;
+
+	//filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#ffffff', startColorstr='#cccccc', gradientType='0');	//ie gradient effect, grey white
+; 	
+	//background-image: url(images/img01.jpg);
+	background-position: center;
+	
+
+
+
+
+}
+
+
+
+#footer {
+	width: 800px;
+	height: auto;
+	margin: 0px;
+	background-color: #69C;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #FFF;
+	text-align: center;
+	padding: 0px;
+	clear: both;
+}
+#header {
+	height: 150px;
+	width: 800px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #289DE7;
+	text-align: right;
+	//filter:progid:DXImageTransform.Microsoft.Gradient(endColorstr='#ffffff', startColorstr='#289DE7', gradientType='0');	//ie gradient effect, grey white
+	
+
+
+}
+
+#container {
+	padding: 5px;
+	width: 800px;
+	height: auto;
+	margin: 0 auto;/* NOTE: centers div*/
+	text-align:left;
+	border: 1px solid #CCC;
+	
+
+	
+
+
+	
+	
+}
+
+
+#container #content {
+	float: right;
+	background-color: #FFF;
+	height: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	width: 540px;
+	padding: 0px;
+	margin: 0px;
+	word-wrap: break-word;
+
+
+
+	
+
+
+}
+
+
+
+
+#container #sidebar {
+	float: left;
+	height: auto;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000;
+	width: 250px;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #FFF;
+}
+
+
+
+
+
+#container #breadcrumb {
+	background-color: #FFF;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	float: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 36px;
+	color: #000;
+	font-weight: bold;
+	text-align: right;
+	font-style: normal;
+}
+
+.codeExample {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #C00;
+	white-space: normal;
+	text-align: left;
+	word-wrap: break-word;
+	float: none;
+
+}
+form {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	border: 2px solid #289DE7;
+	text-align: left;
+}
